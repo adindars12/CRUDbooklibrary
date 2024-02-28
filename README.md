@@ -4,7 +4,7 @@
 Repositori untuk Program CRUD untuk meminjam novel.
 
 **Deskripsi**:  
-Program CRUD dibuat untuk penyimpanan nilai siswa, khususnya nilai tugas, ujian Tenga Semester (UTS) dan Ujian Akhir Semester (UAS). Program ini khusus digunakan oleh guru-guru untuk mencantumkan dan menyimpan nilai-nilai siswa dalam kelasnya. Repositori ini berisi semua kode dan aset yang diperlukan untuk menjalankan proyek.
+Program CRUD dibuat untuk penyimpanan data novel yang dimiliki. Program ini dapat digunakan oleh admin perpustakaan ataupun pengunjung. Repositori ini berisi semua kode dan aset yang diperlukan untuk menjalankan proyek.
 
 **Instalasi**:  
 Untuk menginstal proyek ini, ikuti langkah-langkah berikut:
@@ -25,19 +25,16 @@ Untuk menggunakan proyek ini, ikuti langkah-langkah berikut:
 **Fitur**:  
 1. Menu login  
    Menu pertama yang muncul merupakan menu login, guru harus memasukan ID-nya beserta password untuk memasuki menu utama
-2. Menu utama  
+2. Menu Utama  
    Menu yang ditampilkan setelah melakukan login. Menu ini merupakan tempat user dapat mengakses fitur-fitur program.
-3. Menu Read  
-   Melihat seluruh atau sebagian laporan keluar masuk gudang dan terdapat fitur 
-   sort serta mencari kode barang. 
-3. Create Siswa  
-   Fitur penambahan siswa dimana user memasukkan ID, nama, nilai tugas, nilai UTS, dan nilai UAS siswa.
+3. Create  
+   Fitur ini merupakan penambahan list novel baru yang dapat ditambahkan dengan memasukkan 'Code', 'Title', 'Author', dan 'Genre', hingga sinopsis.
 4. Read 
-   Fitur untuk menampilkan semua data siswa, atau data spesifik siswa melalui pencarian ID.
+   Fitur ini dapat melihat seluruh list novel yang tersedia atau sebagian dengan menggunakan fitur 'search' untuk mencari novel berdasarkan 'Code', 'Title', 'Author', dan 'Genre'. Selain itu, pada menu ini juga ditampilkan sinopsis dari setiap novel dan list novel yang paling banyak dipinjam.
 5. Update  
-   Fitur untuk melakukan pengeditan data siswa. Setelah memasukkan ID siswa yang ingin datanya diubah, user dapat mengubah semua atau satu data siswa. 
+   Fitur ini dilakukan ketika user ingin melakukan pengeditan data pada novel list. Setelah memasukkan 'Code' novel yang ingin diubah datanya, user dapat mengubah semua atau salah satu dari atribut yang dimiliki oleh suatu novel. 
 6. Delete  
-   Fitur penghapusan semua data seorang siswa dengan memasukkan ID siswa yang ingin dihapus.
+   Fitur 'Delete' memiliki fitur untuk menghapus novel yang diinginkan atau menghapus seluruh novel yang ada pada list.
 
 **Kontribusi**:  
 Anda dipersilakan untuk berkontribusi pada proyek ini. Untuk melakukannya, ikuti langkah-langkah berikut:
@@ -47,7 +44,7 @@ Anda dipersilakan untuk berkontribusi pada proyek ini. Untuk melakukannya, ikuti
 4. Kirim pull request ke repositori utama.
 
 **Informasi Kontak**:  
-Jika Anda memiliki pertanyaan atau masalah, silakan hubungi Benedict Emanuel Sutrisna di adindarahmahs12@gmail.com.
+Jika Anda memiliki pertanyaan atau masalah, silakan hubungi Adinda Rahmah Shalihah di adindarahmahs12@gmail.com.
 
 **Penutup**  
-Terima Kasih atas perhatiaan dan minat anda terhadap project capstone ini
+Terima Kasih atas perhatiaan dan minat anda terhadap Library Project Capstone ini
