@@ -10,20 +10,20 @@ Program CRUD dibuat untuk penyimpanan data novel yang dimiliki. Program ini dapa
 Untuk menginstal proyek ini, ikuti langkah-langkah berikut:
 1. Salin repositori ini ke komputer Anda:
 ```
-[git clone https://github.com/nutman451/nutty_modul1_capstone]
+[git clone (https://github.com/adindars12/CRUDbooklibrary)]
 ```
 2. Jalankan file python:
 ```
-Project.py
+final_library_project.py
 ```
 
 **Penggunaan**:  
 Untuk menggunakan proyek ini, ikuti langkah-langkah berikut:
-1. Jalankan file python `project.py`.
+1. Jalankan file python `final_library_project.py`.
 2. Ikuti petunjuk di layar.
 
 **Fitur**:  
-1. Menu login  
+1. Menu Login  
    Menu pertama yang muncul merupakan menu login, guru harus memasukan ID-nya beserta password untuk memasuki menu utama
 2. Menu Utama  
    Menu yang ditampilkan setelah melakukan login. Menu ini merupakan tempat user dapat mengakses fitur-fitur program.
