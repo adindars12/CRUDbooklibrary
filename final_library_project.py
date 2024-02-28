@@ -282,7 +282,7 @@ def search_popularity() :
 def loop_check_novel() :
     while True :
         check_novel()
-        input_check_novel = input("\nPlease, enter your choice between 1-6 : ")
+        input_check_novel = input("\nPlease, enter your choice between 1-7 : ")
         if input_check_novel == "1" :
             show_novel()
             loop_synopsis()           
