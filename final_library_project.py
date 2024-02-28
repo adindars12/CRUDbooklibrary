@@ -54,16 +54,16 @@ def show_member():
 # ===============================================================
 # Novel yang dipinjam
 borrower_list = [
-    ["MM003", "Adinda Rahmah", "As A Spark Goes Wild", date(2021, 6, 15), date(2021, 6, 28)],
-    ["MM002", "Cahyo Wicaksono", "Harry Potter And The Prisoner Of Azkaban", date(2022, 11, 2), date(2022, 11, 29)],
-    ["MM003", "Adinda Rahmah", "Nowhere To Hide", date(2023, 2, 20), date(2023, 3, 1)],
-    ["MM001", "Deva Marine", "One Of Us Is Lying", date(2023, 9, 6), date(2023, 9, 27)],
-    ["MM003", "Adinda Rahmah", "One New Message", date(2023, 12, 11), date(2023, 12, 31)],
-    ["MM001", "Deva Marine", "Nowhere To Hide", date(2024, 2, 14), ""],
-    ["MM003", "Adinda Rahmah", "The Curse of Imperfection", date(2024, 2, 27), ""]
+    ["MM003", "Adinda Rahmah", "As A Spark Goes Wild", 1, date(2021, 6, 15), date(2021, 6, 28)],
+    ["MM002", "Cahyo Wicaksono", "Harry Potter And The Prisoner Of Azkaban", 1, date(2022, 11, 2), date(2022, 11, 29)],
+    ["MM003", "Adinda Rahmah", "Nowhere To Hide", 2, date(2023, 2, 20), date(2023, 3, 1)],
+    ["MM001", "Deva Marine", "One Of Us Is Lying", 1, date(2023, 9, 6), date(2023, 9, 27)],
+    ["MM003", "Adinda Rahmah", "One New Message", 1, date(2023, 12, 11), date(2023, 12, 31)],
+    ["MM001", "Deva Marine", "Nowhere To Hide", 2, date(2024, 2, 14), ""],
+    ["MM003", "Adinda Rahmah", "The Curse of Imperfection", 1, date(2024, 2, 27), ""]
 ]
 
-header_borrower = ["ID", "Name", "Title", "Loan Date", "Return Date/Must Be Return Date"]
+header_borrower = ["ID", "Name", "Title", "Quantity", "Loan Date", "Return Date"]
 
 def show_borrower():
     print(tabulate(borrower_list[:], headers = header_borrower, tablefmt = "fancy_grid"))
@@ -83,7 +83,7 @@ synopsis = [
     ["T03", "\tSepasangan suami istri, Alicia Berenson dan Gabriel Berenson tinggal di sebuah rumah besar yang memiliki jendela besar, yang menghadap ke taman di salah satu daerah yang paling diminati di London. Alicia Berenson yang merupakan pelukis terkenal menikahi Gabriel Berenson yang merupakan seorang fotografer. Suatu malam, Gabriel bekerja lembur. Ia pulang terlambat dari sebuah pemotretan mode. Di malam itu, sesaat setelah Gabriel pulang, terdengar suara tembakan dari rumah Alicia dan Gabriel. Polisi menemukan jasad Gabriel yang sudah tidak bernyawa, dengan posisi diikat ke kursi, dan luka tembak sebanyak lima buah. \n\tSenjata yang menjadi alat pembunuh Gabriel tergeletak di lantai. Alicia berdiri di samping tubuh Gabriel, terdiam mematung, tidak mengeluarkan sepatah kata pun. Alicia sejak saat itu membisu. Ia tak menjawab pertanyaan satu pun. Ia tetap diam ketika dituduh membunuh Gabriel. Alicia tetap bungkam sewaktu ditahan, tidak menyangkal atau mengaku. Ia tak pernah bicara lagi. Alicia tetap membisu - tapi menyatakan satu hal. Dengan lukisan berupa potret diri. Ia memberikan judul lukisan tersebut di sudut kiri bawah kanvas, dengan huruf-huruf Yunani biru terang yang membentuk satu kata: ALCESTIS."]
 ]
 
-# Fungsi looping sinopsis (DONE)
+# Fungsi looping sinopsis
 def loop_synopsis() :
     input_synopsis = input("\nDo you wish to read the synopsis? (Y/N) ").capitalize()
     if input_synopsis == "Y" or input_synopsis == "YES" :
@@ -121,7 +121,6 @@ def loop_synopsis() :
 
 # ===============================================================
 # Popularity
-
 popularity = [
     ["F01", "Funiculi Funicula", "Toshikazu Kawaguchi", "Fantasy", 2015, 23],
     ["F02", "Harry Potter And The Prisoner Of Azkaban", "J. K. Rowling", "Fantasy", 1999, 85],
@@ -160,7 +159,7 @@ def check_novel() :
     print("7. Back to Main Menu")
     return
 
-# Fungsi untuk search kode (DONE)
+# Fungsi untuk search kode
 def search_code() :
     input_code = input("\nEnter novel's code : ").capitalize()
     for i in range(len(novel)) : 
@@ -181,7 +180,7 @@ def search_code() :
             sleep(2)
             return search_code()
         
-# Fungsi untuk search title (DONE)
+# Fungsi untuk search title
 def search_title() :
     input_title = input("\nEnter novel's title : ").title()
     for i in range(len(novel)) : 
@@ -202,7 +201,7 @@ def search_title() :
             sleep(2)
             return search_title()
 
-# Fungsi untuk search author (DONE)
+# Fungsi untuk search author
 def search_author() :
     author_list = []
     input_author = input("\nEnter novel's author : ").title()
@@ -228,7 +227,7 @@ def search_author() :
                 print("\tYour input is incorrect. Please try again")
                 return search_author()
 
-# Fungsi untuk search genre (DONE)
+# Fungsi untuk search genre
 def search_genre() : 
     genre_list = []
     input_genre = input("\nEnter novel's genre : ").title()
@@ -282,7 +281,7 @@ def search_popularity() :
 def loop_check_novel() :
     while True :
         check_novel()
-        input_check_novel = input("\nPlease, enter your choice between 1-7 : ")
+        input_check_novel = input("\nPlease, enter your choice between 1-6 : ")
         if input_check_novel == "1" :
             show_novel()
             loop_synopsis()           
@@ -334,9 +333,6 @@ def loop_add_new_novel() :
 
             new_novel = [input_code, novel_title, novel_author, novel_genre, novel_year, novel_stock]
             new_synopsis = [input_code, novel_synopsis]
-            # print(new_novel)
-            # for i in range(len(novel)) :
-            # print(tabulate(new_novel[:-1], headers = header, tablefmt = "fancy_grid"))
             
             print("\nNew Novel's Information")
             print("=======================")
@@ -380,7 +376,7 @@ def update_novel() :
     print("1. Update novel in the list")
     print("2. Back to Main Menu")
 
-# Fungsi update novel ====NOT FINISHED YET
+# Fungsi update novel
 def loop_update() :
     input_update = input("\nEnter your choice between 1-2 : ")
     for update in input_update : 
@@ -412,14 +408,6 @@ def loop_update() :
                             novel[i][5] = update_stock
                         if update_synopsis != "" :
                             synopsis[i][1] = update_synopsis
-
-                        novel[i][1] = update_title
-                        novel[i][2] = update_author
-                        novel[i][3] = update_genre
-                        novel[i][4] = update_year
-                        novel[i][5] = update_stock
-                        synopsis[i][1] = update_synopsis
-
                         print(tabulate(novel, headers = header, tablefmt = "fancy_grid"))
                         print("\n\tNovel successfully updated!\n")
                         sleep(2)
@@ -428,7 +416,6 @@ def loop_update() :
                         print("\tNovel is not updated.\n")
                         sleep(2)
                         break
-
         elif update == "2" : 
             break
         else :
@@ -530,9 +517,8 @@ def menu_borrow() :
                                 total_novel = int(input("How many copies of this novel you want to borrow? "))
                                 if novel[code][5] >= total_novel :
                                     novel[code][5] -= total_novel
-                                    date_now = date.today() # masih bermasalah
-                                    date_return = date_now + timedelta(days=30)
-                                    list_borrow = [member[name][0], input_member, novel[code][1], date_now, date_return]
+                                    date_now = date.today()
+                                    list_borrow = [member[name][0], input_member, novel[code][1], total_novel, date_now, ""]
                                     borrower_list.append(list_borrow)
                                     print("")
                                     print(tabulate(borrower_list, headers = header_borrower, tablefmt = "fancy_grid"))
