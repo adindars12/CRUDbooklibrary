@@ -1,7 +1,7 @@
 # library_capstone
 
 **Judul**:  
-Repositori untuk Program CRUD untuk meminjam novel.
+Repositori untuk Program CRUD untuk perpustakaan mini.
 
 **Deskripsi**:  
 Program CRUD dibuat untuk penyimpanan data novel yang dimiliki. Program ini dapat digunakan oleh admin perpustakaan ataupun pengunjung. Repositori ini berisi semua kode dan aset yang diperlukan untuk menjalankan proyek.
